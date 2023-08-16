@@ -1,0 +1,14 @@
+1. git clone + адресс репозитория 
+cd + папка репозитория 
+2. cd путь к папке
+git init
+git add .
+git commit -m "commit"
+создание ропозитория на GitHub
+git remote add origin + ссылка на репозиторий
+git branch -M main
+git push -u origin main
+3. git pull
+4. git status текущее состояние рабочего каталога
+git log история коммитов
+git remote -v выводит список удаленных репозиториев
