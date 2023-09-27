@@ -1,0 +1,91 @@
+class DynamicArray {
+    constructor(capacity = 1) {
+        this.array = new Array(capacity);
+        this.size = 0;
+        this.capacity = capacity;
+    }
+
+    ensureCapacity(minCapacity) {
+        if (minCapacity > this.array.length) {
+            while (this.array.length < minCapacity) {
+                this.array.length *= 2;
+            }
+            this.array = [...this.array];
+        }
+    }
+
+    add(data) {
+        if (this.size === this.capacity) {
+            this.ensureCapacity(this.capacity + 1);
+        }
+        this.array[this.size++] = data;
+    }
+
+    remove() {
+        if (this.size === 0) {
+            throw new Error("DynamicArray is empty");
+        }
+        this.array[--this.size] = undefined;
+    }
+
+    removeAt(index) {
+        if (index < 0 || index >= this.size) {
+            throw new Error("Index is out of bounds");
+        }
+        for (let i = index; i < this.size - 1; i++) {
+            this.array[i] = this.array[i + 1];
+        }
+        this.array[--this.size] = undefined;
+    }
+
+    growSize() {
+        this.ensureCapacity(this.capacity * 2);
+    }
+
+    set(index, data) {
+        if (index < 0 || index >= this.size) {
+            throw new Error("Index is out of bounds");
+        }
+        this.array[index] = data;
+    }
+
+    clean() {
+        for (let i = 0; i < this.size; i++) {
+            this.array[i] = undefined;
+        }
+        this.size = 0;
+    }
+
+    contains(data) {
+        for (let i = 0; i < this.size; i++) {
+            if (this.array[i] === data) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    isEmpty() {
+        return this.size === 0;
+    }
+
+    print() {
+        console.log(this.array.slice(0, this.size).join(' '));
+    }
+}
+
+const dynamicArray = new DynamicArray(10);
+dynamicArray.add(1);
+dynamicArray.add(2);
+dynamicArray.add(3);
+dynamicArray.print();
+dynamicArray.remove();
+dynamicArray.print();
+dynamicArray.removeAt(0);
+dynamicArray.print();
+dynamicArray.add(4);
+dynamicArray.print();
+console.log("Contains 3:", dynamicArray.contains(3));
+console.log("IsEmpty:", dynamicArray.isEmpty());
+dynamicArray.clean();
+dynamicArray.print();
