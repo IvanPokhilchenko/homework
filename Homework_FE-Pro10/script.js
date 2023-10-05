@@ -7,7 +7,9 @@ const counterPar = document.querySelector("#counter");
 const incrementBtn = document.querySelector("#incBtn");
 const decrementBtn = document.querySelector("#decBtn");
 
-let number = +counterPar.textContent;
+let number = +localStorage.getItem("counterValue");
+
+counterPar.textContent = number;
 
 incrementBtn.onclick = () => {
     number++;
@@ -21,8 +23,4 @@ decrementBtn.onclick = () => {
     localStorage.setItem("counterValue", number);
 };
 
-const savedCounter = localStorage.getItem("counterValue");
-if (savedCounter) {
-  counterPar.textContent = savedCounter;
-}
 
