@@ -1,0 +1,45 @@
+function findShortestSubsequence(nums, target) {
+    // Инициализируем указатели left и right, текущую сумму currentSum,
+    // минимальную длину minLength и результирующий массив result.
+    let left = 0;
+    let right = 0;
+    let currentSum = 0;
+    let minLength = Infinity;
+    let result = [];
+
+    // Начинаем цикл, который будет итерироваться от left к right
+    while (right < nums.length) {
+        currentSum += nums[right]; // Добавляем числа к сумме.
+        while (currentSum >= target) {
+            // Если текущая сумма больше или равна target,
+            // проверяем длину подпоследовательности и обновляем minLength и result.
+            if (right - left + 1 < minLength && currentSum === target) {
+                minLength = right - left + 1;
+                result = [left, right];
+            }
+            // Убираем числа с начала подпоследовательности, чтобы сумма снова стала меньше target.
+            currentSum -= nums[left];
+            left++;
+        }
+        right++; // Увеличиваем right, чтобы продолжить итерацию.
+    }
+
+ 
+    if (minLength === Infinity) {
+        return [-1]; // Возвращаем [-1] в этом случае.
+    }
+
+    // Возвращаем подпоследовательность из исходного массива согласно результату.
+    return nums.slice(result[0], result[1] + 1);
+}
+
+const nums = [2, 3, 1, 2, 4, 3];
+const target = 7;
+const result = findShortestSubsequence(nums, target);
+
+// Проверяем результат и выводим сообщение.
+if (result.length === 1 && result[0] === -1) {
+    console.log(`Сумма ${target} не может быть получена из элементов массива.`);
+} else {
+    console.log(`Самая короткая подпоследовательность суммирующаяся в ${target} это: ${result.join(' ')}`);
+}
