@@ -1,0 +1,30 @@
+.apps{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-top: 40px;
+  @include medium-screen{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+  .apps-text{
+    @include medium-screen{
+      margin-top: 0px;
+    }
+    margin-top: 270px;
+    .gradient4{
+    width: 425px;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 45px;
+    background-image: $text-gradient;
+    color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+  }
+  p{
+    width: 480px;
+    color: $text-color;
+    line-height: 30px;
+  }
+}
+}
