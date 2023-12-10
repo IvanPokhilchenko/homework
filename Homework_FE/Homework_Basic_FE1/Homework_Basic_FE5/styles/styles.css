@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color:darkorange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+.icon{
+    margin: 10px;
+    width: 70px;
+    height: 70px;
+}
+.nav{
+    width: 300px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.nav1{width: 70px; }
+.nav2{width: 100px; }
+.nav3{width: 130px; }
+.social{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 150px;  
+    cursor: pointer; 
+}
+.content{
+    display: flex;
+    justify-content: center;
+    background-image: url(/Homework/Homework_Basic_FE5/images/privacybydesign\ \(2\).webp);
+}
+
+.container{
+    margin: 10px;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    left: 50px;
+}
+.red, .green, .blue{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    z-index: 0;
+}
+.red{
+    background-color: red;
+    top: o;
+    left: 0;
+}
+.green{
+    background-color:green;
+    top: 50px;
+    left:100px;
+    z-index: 10;
+    transition: transform 0.5s, width 0.5s, height 0.5s;
+}
+.green:hover{
+    width: 300px;
+    height: 300px;
+    transform: rotate(-45deg);
+    z-index: 20;
+    cursor: pointer;
+}
+.blue{
+    background-color: blue;
+    top: 100px;
+    left: 150px;
+}
+
+.footer {
+    background-image: url(/Homework/Homework_Basic_FE5/images/localization-1-1024x683.jpg);
+    width: 100%;
+    height: 600px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-container {
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  .image-container img {
+    width: 400px;
+    height: 400px;
+  }
+
+

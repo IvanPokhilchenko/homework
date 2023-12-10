@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Document</title>
+</head>
+<body>
+<form>
+    <input id="name" type="text" name="name" placeholder="Название" required>
+    <br>
+    <input type="number" id="price" placeholder="Цена" required>
+    <br>
+    <br>
+    <button class="submit">Добавить</button>
+</form>
+
+<section id="container">
+    <div id="srch">
+        <input type="text" placeholder="Поиск..." id="search">
+        <button id="searchBtn">Поиск</button>
+        <button id="clearSearch">Очистить результаты поиска</button>
+    </div>
+    
+    <div id="sorted">
+        <h3>Отсортировать</h3>
+        <button id="sort">Цена</button>
+    </div>
+    
+    <div id="calc">
+        <button id="calculator">Посчитать итоговую сумму всех продуктов</button>
+        <p>Итоговая сумма: 0</p>
+    </div>
+    <button id="deleteProducts">Удалить все товары</button>
+</section>
+
+
+
+<section id="allProducts"></section>
+
+
+    <script src="./script.js"></script>
+</body>
+</html>

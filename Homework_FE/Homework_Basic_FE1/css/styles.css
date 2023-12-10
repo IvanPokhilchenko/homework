@@ -1,0 +1,29 @@
+body{
+    background-color: #d0e2f5;
+    margin: 0px;
+    padding: 0px;
+}
+h1{
+    margin-bottom: 20px;
+    margin: 5px;
+    padding: 15px;
+    text-align: center;
+}
+h1:hover{
+    border: 2px dotted rgb(155, 22, 22);
+    background-color: bisque;
+}
+.text{
+    background-color: #34495e;
+    border-radius: 20px;
+    padding: 21px;
+    border: 2px solid black;
+    margin: 10px;
+}
+.text:hover{
+    background-color: antiquewhite;
+}
+h2{
+    margin: 5px;
+    text-align: center;
+}

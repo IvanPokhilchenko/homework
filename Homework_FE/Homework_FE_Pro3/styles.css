@@ -1,0 +1,12 @@
+body{
+    background-color: bisque;
+}
+#container{
+    margin: auto;
+    background-color: aquamarine;
+}
+a{
+    display:flex;
+    margin: 5px;
+    padding: 5px;
+}

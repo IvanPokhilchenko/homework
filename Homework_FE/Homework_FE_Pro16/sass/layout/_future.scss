@@ -1,0 +1,50 @@
+.future{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin-top: 70px;
+  @include medium-screen{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
+ 
+  .gradient3{
+    width: 425px;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 45px;
+    background-image: $text-gradient;
+    color: transparent;
+    background-clip: text;
+  }
+  .texts{
+    margin: 0px 80px;
+    @include medium-screen{
+margin: 0; 
+ }
+    .text-p{
+      color: $nav-link;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 24px; 
+      letter-spacing: -0.72px;
+      margin-bottom: 25px;
+    }
+  }
+  .parag{
+    margin-left: 40px;
+    @include medium-screen{
+      margin: 0;
+      
+     }
+    .par{
+      color: $text-color;
+      font-family: Manrope;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px; 
+      margin-bottom: 20px;
+    }
+  }
+}
