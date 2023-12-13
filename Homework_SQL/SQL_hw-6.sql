@@ -2,6 +2,8 @@
 
 -- Добавить несколько записей в каждую таблицу выше
 
+
+-- Таблицу реакций мы создали еще на уроке
 CREATE TABLE comments (
     comments_id int,
     created_at timestamp,
