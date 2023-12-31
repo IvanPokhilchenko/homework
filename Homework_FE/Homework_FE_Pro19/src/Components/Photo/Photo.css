@@ -1,0 +1,16 @@
+.photo {
+  display: flex;
+  justify-content:flex-start;
+  text-align: center;
+  background-color: aqua;
+  box-shadow: 1px 1px 5px 2px black;
+}
+
+.photo img {
+  width: 200px;
+  border-radius: 50%;
+}
+h2{
+  margin-top: 50px;
+  margin-left: 40px;
+}

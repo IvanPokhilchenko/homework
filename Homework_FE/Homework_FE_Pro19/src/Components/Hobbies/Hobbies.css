@@ -1,0 +1,12 @@
+.hobbies {
+  margin-top: 20px;
+}
+
+.hobbies ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.hobbies li {
+  margin-bottom: 8px;
+}
