@@ -1,0 +1,20 @@
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.post-card {
+  flex: 1 1 300px;
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 3px 5px rgba(213, 80, 80, 0.367);
+}
+
+.read-link {
+  display: block;
+  margin-top: 8px;
+  color: #007bff;
+  text-decoration: none;
+}

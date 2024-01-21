@@ -1,0 +1,14 @@
+.post-card{
+  max-width: 800px;
+  width: 100%;
+  background-color: aquamarine;
+  border: 1px solid #dddddd;
+  padding: 16px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 3px 4px 4px rgba(0, 0, 0, 0.477);
+}
+.comment{
+  margin-top: 8px;
+
+}

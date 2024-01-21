@@ -1,0 +1,19 @@
+body{
+  background-color:rgba(246, 246, 112, 0.546);
+}
+.container{
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aqua;
+}
+.link{
+  color: black;
+  margin-right: 15px;
+}
+.active{
+  color: red;
+  margin-right: 15px;
+}
